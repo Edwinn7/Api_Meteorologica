@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <meta http-equiv="Content-Language" content="en">
+  <title>App Meteorológica</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <div class="card">
     <div class="search">
-      <input type="text" class="search-bar" placeholder="Search">
+      <input type="text" class="search-bar" placeholder="Buscar">
       <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
           width="1.5em" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -23,16 +23,19 @@
         </svg></button>
     </div>
     <div class="weather loading">
-      <h2 class="city">Weather in Denver</h2>
-      <h1 class="temp">51°C</h1>
+      <p class="error"></p>
+      <h1 class="city"></h1>
+      <h2 class="temp"></h2>
+      <h3 class="time"></h3>
       <div class="flex">
         <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <div class="description">Cloudy</div>
+        <div class="description"></div>
       </div>
-      <div class="humidity">Humidity: 60%</div>
-      <div class="wind">Wind speed: 6.2 km/h</div>
+      <div class="humidity"></div>
+      <div class="wind"></div>
     </div>
   </div>
+  <script src="./js/app.js" defer></script>
 </body>
 
 </html>

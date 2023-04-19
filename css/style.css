@@ -1,3 +1,5 @@
+/* General */
+
 body {
   display: flex;
   justify-content: center;
@@ -18,7 +20,36 @@ body {
   width: 100%;
   max-width: 420px;
   margin: 1em;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transform: scale(1);
 }
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.loading svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Search */
 
 .search {
   display: flex;
@@ -36,7 +67,13 @@ button {
   background: #7c7c7c2b;
   color: white;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #7c7c7c6b;
+  box-shadow: 0px 0px 10px #888;
+  transform: scale(1.1);
 }
 
 input.search-bar {
@@ -49,20 +86,20 @@ input.search-bar {
   font-family: inherit;
   font-size: 105%;
   width: calc(100% - 100px);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-button:hover {
+input.search-bar:hover {
   background: #7c7c7c6b;
+  box-shadow: 0px 0px 10px #888;
+  transform: scale(1.0);
 }
+
+/* Weather */
 
 h1.temp {
   margin: 0;
   margin-bottom: 0.4em;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
 }
 
 .description {
@@ -84,3 +121,19 @@ h1.temp {
   top: 0;
   left: 20px;
 }
+
+/* Alerts */
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#ff8a80;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: shake 0.5s;
+}
+
+
